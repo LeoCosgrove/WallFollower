@@ -1,47 +1,9 @@
-// Lab21_OPT3101_TestMain.c
-//*****************************************************************************
-// Lab21 main for Robot with OPT3101 time of flight sensor
-// MSP432 with RSLK Max and OPT3101
-// Daniel and Jonathan Valvano
-// July 7, 2020
-//****************************************************************************
-/* This example accompanies the book
-   "Embedded Systems: Introduction to Robotics,
-   Jonathan W. Valvano, ISBN: 9781074544300, copyright (c) 2020
- For more information about my classes, my research, and my books, see
- http://users.ece.utexas.edu/~valvano/
-
-Simplified BSD License (FreeBSD License)
-Copyright (c) 2020, Jonathan Valvano, All rights reserved.
-
-Redistribution and use in source and binary forms, with or without modification,
-are permitted provided that the following conditions are met:
-
-1. Redistributions of source code must retain the above copyright notice,
-   this list of conditions and the following disclaimer.
-2. Redistributions in binary form must reproduce the above copyright notice,
-   this list of conditions and the following disclaimer in the documentation
-   and/or other materials provided with the distribution.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
-LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED
-AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE
-USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-The views and conclusions contained in the software and documentation are
-those of the authors and should not be interpreted as representing official
-policies, either expressed or implied, of the FreeBSD Project.
-*/
-// see opt3101.h for OPT3101 hardware connections
-// see Nokia5110.h LCD hardware connections
-// see SSD1306.h for OLED hardware connections
-// see UART0.h for UART0 hardware connections
+/* Based on LAB21 Solution
+ * TODO:
+ * Web interface
+ * Tune wall following
+ * Set delay time after collision
+ */
 
 #include <stdint.h>
 #include "msp.h"
@@ -56,6 +18,7 @@ policies, either expressed or implied, of the FreeBSD Project.
 #include "../inc/UART0.h"
 #include "../inc/SSD1306.h"
 #include "../inc/FFT.h"
+#include "..\inc\UART1.h"
 // Select one of the following three output possibilities
 // define USENOKIA
 #define USEOLED 1
@@ -246,11 +209,15 @@ void Pause(void){int i;
 
 void main(void){ // wallFollow wall following implementation
   int i = 0;
+  bool runFlag = true;
+  char charIn = 'g';
   uint32_t channel = 1;
   DisableInterrupts();
   Clock_Init48MHz();
   Bump_Init();
   LaunchPad_Init(); // built-in switches and LEDs
+  Motor_Init();
+  UART1_Init();     // initialize UART
   Motor_Stop(); // initialize and stop
   Mode = 0;
   I2CB1_Init(30); // baud rate = 12MHz/30=400kHz
@@ -283,51 +250,68 @@ void main(void){ // wallFollow wall following implementation
   UR = UL = PWMNOMINAL; //initial power
   Pause();
   EnableInterrupts();
+
   while(1){
-    if(Bump_Read()){ // collision
-      Mode = 0;
-      Motor_Stop();
-      Pause();
-    }
-    if(TxChannel <= 2){ // 0,1,2 means new data
-      if(TxChannel==0){
-        if(Amplitudes[0] > 1000){
-          LeftDistance = FilteredDistances[0] = Left(LPF_Calc(Distances[0]));
-        }else{
-          LeftDistance = FilteredDistances[0] = 500;
+    // read BLE
+    if(UART1_InStatus() != 0){
+        charIn = UART1_InChar();
+        switch(charIn){
+                case 'g':
+                    runFlag = true;
+                    break;
+                case 's':
+                    runFlag = false;
+                    break;
         }
-      }else if(TxChannel==1){
-        if(Amplitudes[1] > 1000){
-          CenterDistance = FilteredDistances[1] = LPF_Calc2(Distances[1]);
-        }else{
-          CenterDistance = FilteredDistances[1] = 500;
-        }
-      }else {
-        if(Amplitudes[2] > 1000){
-          RightDistance = FilteredDistances[2] = Right(LPF_Calc3(Distances[2]));
-        }else{
-          RightDistance = FilteredDistances[2] = 500;
-        }
-      }
-      SetCursor(2, TxChannel+1);
-      OutUDec(FilteredDistances[TxChannel]); OutChar(','); OutUDec(Amplitudes[TxChannel]);
-      TxChannel = 3; // 3 means no data
-      channel = (channel+1)%3;
-      OPT3101_StartMeasurementChannel(channel);
-      i = i + 1;
-    }
-    Controller_Right();
-    if(i >= 100){
-      i = 0;
-      SetCursor(3, 5);
-      OutUDec(SetPoint);
-      SetCursor(3, 6);
-      OutSDec(Error);
-      SetCursor(3, 7);
-      OutUDec(UL); OutChar(','); OutUDec(UR);
     }
 
-    WaitForInterrupt();
+    if(runFlag)
+    {
+        if(Bump_Read()){ // collision
+          Mode = 0;
+          Motor_Stop();
+          Pause();
+        }
+        if(TxChannel <= 2){ // 0,1,2 means new data
+          if(TxChannel==0){
+            if(Amplitudes[0] > 1000){
+              LeftDistance = FilteredDistances[0] = Left(LPF_Calc(Distances[0]));
+            }else{
+              LeftDistance = FilteredDistances[0] = 500;
+            }
+          }else if(TxChannel==1){
+            if(Amplitudes[1] > 1000){
+              CenterDistance = FilteredDistances[1] = LPF_Calc2(Distances[1]);
+            }else{
+              CenterDistance = FilteredDistances[1] = 500;
+            }
+          }else {
+            if(Amplitudes[2] > 1000){
+              RightDistance = FilteredDistances[2] = Right(LPF_Calc3(Distances[2]));
+            }else{
+              RightDistance = FilteredDistances[2] = 500;
+            }
+          }
+          SetCursor(2, TxChannel+1);
+          OutUDec(FilteredDistances[TxChannel]); OutChar(','); OutUDec(Amplitudes[TxChannel]);
+          TxChannel = 3; // 3 means no data
+          channel = (channel+1)%3;
+          OPT3101_StartMeasurementChannel(channel);
+          i = i + 1;
+        }
+        Controller_Right();
+        if(i >= 100){
+          i = 0;
+          SetCursor(3, 5);
+          OutUDec(SetPoint);
+          SetCursor(3, 6);
+          OutSDec(Error);
+          SetCursor(3, 7);
+          OutUDec(UL); OutChar(','); OutUDec(UR);
+        }
+
+        WaitForInterrupt();
+      }
   }
 }
 
