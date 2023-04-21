@@ -11,6 +11,7 @@
 "./PWM.obj"
 "./SSD1306.obj"
 "./UART0.obj"
+"./UART1.obj"
 "./opt3101.obj"
 "./startup_msp432p401r_ccs.obj"
 "./system_msp432p401r.obj"

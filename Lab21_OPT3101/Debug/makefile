@@ -23,6 +23,7 @@ ORDERED_OBJS += \
 "./PWM.obj" \
 "./SSD1306.obj" \
 "./UART0.obj" \
+"./UART1.obj" \
 "./opt3101.obj" \
 "./startup_msp432p401r_ccs.obj" \
 "./system_msp432p401r.obj" \
@@ -156,8 +157,8 @@ Lab21_OPT3101.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 # Other Targets
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)
-	-$(RM) "Bump.obj" "Clock.obj" "CortexM.obj" "FFT.obj" "I2CB1.obj" "LPF.obj" "Lab21_OPT3101_TestMain.obj" "LaunchPad.obj" "Motor.obj" "Nokia5110.obj" "PWM.obj" "SSD1306.obj" "UART0.obj" "opt3101.obj" "startup_msp432p401r_ccs.obj" "system_msp432p401r.obj" 
-	-$(RM) "Bump.d" "Clock.d" "CortexM.d" "FFT.d" "I2CB1.d" "LPF.d" "Lab21_OPT3101_TestMain.d" "LaunchPad.d" "Motor.d" "Nokia5110.d" "PWM.d" "SSD1306.d" "UART0.d" "opt3101.d" "startup_msp432p401r_ccs.d" "system_msp432p401r.d" 
+	-$(RM) "Bump.obj" "Clock.obj" "CortexM.obj" "FFT.obj" "I2CB1.obj" "LPF.obj" "Lab21_OPT3101_TestMain.obj" "LaunchPad.obj" "Motor.obj" "Nokia5110.obj" "PWM.obj" "SSD1306.obj" "UART0.obj" "UART1.obj" "opt3101.obj" "startup_msp432p401r_ccs.obj" "system_msp432p401r.obj" 
+	-$(RM) "Bump.d" "Clock.d" "CortexM.d" "FFT.d" "I2CB1.d" "LPF.d" "Lab21_OPT3101_TestMain.d" "LaunchPad.d" "Motor.d" "Nokia5110.d" "PWM.d" "SSD1306.d" "UART0.d" "UART1.d" "opt3101.d" "startup_msp432p401r_ccs.d" "system_msp432p401r.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 
