@@ -8,51 +8,20 @@
 
 #include <stdint.h>
 #include "msp.h"
-#include "../inc/Clock.h"
-#include "../inc/I2CB1.h"
-#include "../inc/CortexM.h"
-#include "../inc/LPF.h"
-#include "../inc/opt3101.h"
-#include "../inc/LaunchPad.h"
-#include "../inc/Bump.h"
-#include "../inc/Motor.h"
-#include "../inc/UART0.h"
-#include "../inc/SSD1306.h"
-#include "../inc/FFT.h"
-#include "..\inc\UART1.h"
-// Select one of the following three output possibilities
-// define USENOKIA
-#define USEOLED 1
-//#define USEUART
+#include "./inc/Clock.h"
+#include "./inc/I2CB1.h"
+#include "./inc/CortexM.h"
+#include "./inc/LPF.h"
+#include "./inc/opt3101.h"
+#include "./inc/LaunchPad.h"
+#include "./inc/Bump.h"
+#include "./inc/Motor.h"
+#include "./inc/UART0.h"
+#include "./inc/FFT.h"
+#include "./inc/UART1.h"
 
-#ifdef USENOKIA
-// this batch configures for LCD
-#include "../inc/Nokia5110.h"
-#define Init Nokia5110_Init
-#define Clear Nokia5110_Clear
-#define SetCursor Nokia5110_SetCursor
-#define OutString Nokia5110_OutString
-#define OutChar Nokia5110_OutChar
-#define OutUDec Nokia5110_OutUDec
-#define OutSDec Nokia5110_OutSDec
-#endif
-
-#ifdef USEOLED
-// this batch configures for OLED
-
-void OLEDinit(void){SSD1306_Init(SSD1306_SWITCHCAPVCC);}
-#define Init OLEDinit
-#define Clear SSD1306_Clear
-#define SetCursor SSD1306_SetCursor
-#define OutChar SSD1306_OutChar
-#define OutString SSD1306_OutString
-#define OutUDec SSD1306_OutUDec
-#define OutSDec SSD1306_OutSDec
-#endif
-
-#ifdef USEUART
 // this batch configures for UART link to PC
-#include "../inc/UART0.h"
+#include "./inc/UART0.h"
 void UartSetCur(uint8_t newX, uint8_t newY){
   if(newX == 6){
     UART0_OutString("\n\rTxChannel= ");
@@ -70,7 +39,6 @@ void UartClear(void){UART0_OutString("\n\r");};
 #define OutChar UART0_OutChar
 #define OutUDec UART0_OutUDec
 #define OutSDec UART0_OutSDec
-#endif
 
 uint32_t Distances[3];
 uint32_t FilteredDistances[3];

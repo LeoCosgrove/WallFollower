@@ -1,7 +1,7 @@
 #include "opt3101.h"
 #include <msp.h>
-#include "../inc/I2CB1.h"
-#include "../inc/Clock.h"
+#include "./I2CB1.h"
+#include "./Clock.h"
 // edited by Valvano and Valvano 12/22/2019
 // hardware
 // GND    ground

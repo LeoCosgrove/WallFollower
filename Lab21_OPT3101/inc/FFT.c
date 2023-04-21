@@ -43,7 +43,7 @@ policies, either expressed or implied, of the FreeBSD Project.
 
 #include <math.h>
 #include <stdlib.h>
-#include "../inc/FFT.h"
+#include "./FFT.h"
 
 const float cosTab[1024][11]={
   {1.00000000, 1.00000000, 1.00000000, 1.00000000, 1.00000000, 1.00000000, 1.00000000, 1.00000000, 1.00000000, 1.00000000, 1.00000000},
