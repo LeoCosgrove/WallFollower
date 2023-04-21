@@ -21,6 +21,8 @@ opt3101.obj: C:/ti/ccs1220/ccs/ccs_base/arm/include/CMSIS/core_cm4.h
 opt3101.obj: C:/ti/ccs1220/ccs/ccs_base/arm/include/CMSIS/cmsis_compiler.h
 opt3101.obj: C:/ti/ccs1220/ccs/ccs_base/arm/include/CMSIS/cmsis_ccs.h
 opt3101.obj: C:/ti/ccs1220/ccs/ccs_base/arm/include/system_msp432p401r.h
+opt3101.obj: ../../inc/I2CB1.h
+opt3101.obj: ../../inc/Clock.h
 
 ../opt3101.c:
 
@@ -63,4 +65,8 @@ C:/ti/ccs1220/ccs/ccs_base/arm/include/CMSIS/cmsis_compiler.h:
 C:/ti/ccs1220/ccs/ccs_base/arm/include/CMSIS/cmsis_ccs.h:
 
 C:/ti/ccs1220/ccs/ccs_base/arm/include/system_msp432p401r.h:
+
+../../inc/I2CB1.h:
+
+../../inc/Clock.h:
 

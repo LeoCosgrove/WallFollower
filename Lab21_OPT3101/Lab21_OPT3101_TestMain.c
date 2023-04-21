@@ -112,7 +112,7 @@ uint32_t Sigma;    // standard deviation = sqrt(Variance)
 int32_t Mode=0; // 0 stop, 1 run
 int32_t Error;
 int32_t Ki=1;  // integral controller gain
-int32_t Kp=4;  // proportional controller gain //was 4
+int32_t Kp=1;  // proportional controller gain //was 4
 int32_t UR, UL;  // PWM duty 0 to 14,998
 
 #define TOOCLOSE 200 //was 200
@@ -185,6 +185,7 @@ void Controller_Right(void){ // runs at 100 Hz
 }
 
 void Pause(void){int i;
+/*
   while(Bump_Read()){ // wait for release
     Clock_Delay1ms(200); LaunchPad_Output(0); // off
     Clock_Delay1ms(200); LaunchPad_Output(1); // red
@@ -197,6 +198,7 @@ void Pause(void){int i;
     Clock_Delay1ms(100); LaunchPad_Output(0); // off
     Clock_Delay1ms(100); LaunchPad_Output(4); // blue
   }
+  */
   for(i=1000;i>100;i=i-200){
     Clock_Delay1ms(i); LaunchPad_Output(0); // off
     Clock_Delay1ms(i); LaunchPad_Output(2); // green
@@ -261,17 +263,21 @@ void main(void){ // wallFollow wall following implementation
                     break;
                 case 's':
                     runFlag = false;
+                    Motor_Stop();
                     break;
         }
     }
 
     if(runFlag)
     {
+
         if(Bump_Read()){ // collision
           Mode = 0;
           Motor_Stop();
           Pause();
         }
+
+
         if(TxChannel <= 2){ // 0,1,2 means new data
           if(TxChannel==0){
             if(Amplitudes[0] > 1000){

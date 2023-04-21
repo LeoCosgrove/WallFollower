@@ -9,19 +9,19 @@ CMD_SRCS += \
 ../msp432p401r.cmd 
 
 C_SRCS += \
-C:/Users/theab/Documents/School/Cyber-Physical\ Systems/WallFollower/inc/Bump.c \
-C:/Users/theab/Documents/School/Cyber-Physical\ Systems/WallFollower/inc/Clock.c \
-C:/Users/theab/Documents/School/Cyber-Physical\ Systems/WallFollower/inc/CortexM.c \
+C:/Users/theab/Documents/School/Cyber-Physical\ Systems/tirslk_max_1_00_00/inc/Bump.c \
+C:/Users/theab/Documents/School/Cyber-Physical\ Systems/tirslk_max_1_00_00/inc/Clock.c \
+C:/Users/theab/Documents/School/Cyber-Physical\ Systems/tirslk_max_1_00_00/inc/CortexM.c \
 ../FFT.c \
 ../I2CB1.c \
-C:/Users/theab/Documents/School/Cyber-Physical\ Systems/WallFollower/inc/LPF.c \
+C:/Users/theab/Documents/School/Cyber-Physical\ Systems/tirslk_max_1_00_00/inc/LPF.c \
 ../Lab21_OPT3101_TestMain.c \
-C:/Users/theab/Documents/School/Cyber-Physical\ Systems/WallFollower/inc/LaunchPad.c \
-C:/Users/theab/Documents/School/Cyber-Physical\ Systems/WallFollower/inc/Motor.c \
-C:/Users/theab/Documents/School/Cyber-Physical\ Systems/WallFollower/inc/Nokia5110.c \
-C:/Users/theab/Documents/School/Cyber-Physical\ Systems/WallFollower/inc/PWM.c \
-C:/Users/theab/Documents/School/Cyber-Physical\ Systems/WallFollower/inc/SSD1306.c \
-C:/Users/theab/Documents/School/Cyber-Physical\ Systems/WallFollower/inc/UART0.c \
+C:/Users/theab/Documents/School/Cyber-Physical\ Systems/tirslk_max_1_00_00/inc/LaunchPad.c \
+C:/Users/theab/Documents/School/Cyber-Physical\ Systems/tirslk_max_1_00_00/inc/Motor.c \
+C:/Users/theab/Documents/School/Cyber-Physical\ Systems/tirslk_max_1_00_00/inc/Nokia5110.c \
+C:/Users/theab/Documents/School/Cyber-Physical\ Systems/tirslk_max_1_00_00/inc/PWM.c \
+C:/Users/theab/Documents/School/Cyber-Physical\ Systems/tirslk_max_1_00_00/inc/SSD1306.c \
+C:/Users/theab/Documents/School/Cyber-Physical\ Systems/tirslk_max_1_00_00/inc/UART0.c \
 ../UART1.c \
 ../opt3101.c \
 ../startup_msp432p401r_ccs.c \
@@ -104,19 +104,19 @@ C_DEPS__QUOTED += \
 "system_msp432p401r.d" 
 
 C_SRCS__QUOTED += \
-"C:/Users/theab/Documents/School/Cyber-Physical Systems/WallFollower/inc/Bump.c" \
-"C:/Users/theab/Documents/School/Cyber-Physical Systems/WallFollower/inc/Clock.c" \
-"C:/Users/theab/Documents/School/Cyber-Physical Systems/WallFollower/inc/CortexM.c" \
+"C:/Users/theab/Documents/School/Cyber-Physical Systems/tirslk_max_1_00_00/inc/Bump.c" \
+"C:/Users/theab/Documents/School/Cyber-Physical Systems/tirslk_max_1_00_00/inc/Clock.c" \
+"C:/Users/theab/Documents/School/Cyber-Physical Systems/tirslk_max_1_00_00/inc/CortexM.c" \
 "../FFT.c" \
 "../I2CB1.c" \
-"C:/Users/theab/Documents/School/Cyber-Physical Systems/WallFollower/inc/LPF.c" \
+"C:/Users/theab/Documents/School/Cyber-Physical Systems/tirslk_max_1_00_00/inc/LPF.c" \
 "../Lab21_OPT3101_TestMain.c" \
-"C:/Users/theab/Documents/School/Cyber-Physical Systems/WallFollower/inc/LaunchPad.c" \
-"C:/Users/theab/Documents/School/Cyber-Physical Systems/WallFollower/inc/Motor.c" \
-"C:/Users/theab/Documents/School/Cyber-Physical Systems/WallFollower/inc/Nokia5110.c" \
-"C:/Users/theab/Documents/School/Cyber-Physical Systems/WallFollower/inc/PWM.c" \
-"C:/Users/theab/Documents/School/Cyber-Physical Systems/WallFollower/inc/SSD1306.c" \
-"C:/Users/theab/Documents/School/Cyber-Physical Systems/WallFollower/inc/UART0.c" \
+"C:/Users/theab/Documents/School/Cyber-Physical Systems/tirslk_max_1_00_00/inc/LaunchPad.c" \
+"C:/Users/theab/Documents/School/Cyber-Physical Systems/tirslk_max_1_00_00/inc/Motor.c" \
+"C:/Users/theab/Documents/School/Cyber-Physical Systems/tirslk_max_1_00_00/inc/Nokia5110.c" \
+"C:/Users/theab/Documents/School/Cyber-Physical Systems/tirslk_max_1_00_00/inc/PWM.c" \
+"C:/Users/theab/Documents/School/Cyber-Physical Systems/tirslk_max_1_00_00/inc/SSD1306.c" \
+"C:/Users/theab/Documents/School/Cyber-Physical Systems/tirslk_max_1_00_00/inc/UART0.c" \
 "../UART1.c" \
 "../opt3101.c" \
 "../startup_msp432p401r_ccs.c" \
