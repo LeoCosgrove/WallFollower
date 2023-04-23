@@ -15,8 +15,14 @@ C_SRCS += \
 ../inc/LaunchPad.c \
 ../inc/Motor.c \
 ../inc/PWM.c \
+../inc/SSD1306.c \
+../inc/TA3InputCapture.c \
+../inc/Tachometer.c \
 ../inc/UART0.c \
 ../inc/UART1.c \
+../inc/blinker.c \
+../inc/fixed.c \
+../inc/odometry.c \
 ../inc/opt3101.c 
 
 C_DEPS += \
@@ -29,8 +35,14 @@ C_DEPS += \
 ./inc/LaunchPad.d \
 ./inc/Motor.d \
 ./inc/PWM.d \
+./inc/SSD1306.d \
+./inc/TA3InputCapture.d \
+./inc/Tachometer.d \
 ./inc/UART0.d \
 ./inc/UART1.d \
+./inc/blinker.d \
+./inc/fixed.d \
+./inc/odometry.d \
 ./inc/opt3101.d 
 
 OBJS += \
@@ -43,8 +55,14 @@ OBJS += \
 ./inc/LaunchPad.obj \
 ./inc/Motor.obj \
 ./inc/PWM.obj \
+./inc/SSD1306.obj \
+./inc/TA3InputCapture.obj \
+./inc/Tachometer.obj \
 ./inc/UART0.obj \
 ./inc/UART1.obj \
+./inc/blinker.obj \
+./inc/fixed.obj \
+./inc/odometry.obj \
 ./inc/opt3101.obj 
 
 OBJS__QUOTED += \
@@ -57,8 +75,14 @@ OBJS__QUOTED += \
 "inc\LaunchPad.obj" \
 "inc\Motor.obj" \
 "inc\PWM.obj" \
+"inc\SSD1306.obj" \
+"inc\TA3InputCapture.obj" \
+"inc\Tachometer.obj" \
 "inc\UART0.obj" \
 "inc\UART1.obj" \
+"inc\blinker.obj" \
+"inc\fixed.obj" \
+"inc\odometry.obj" \
 "inc\opt3101.obj" 
 
 C_DEPS__QUOTED += \
@@ -71,8 +95,14 @@ C_DEPS__QUOTED += \
 "inc\LaunchPad.d" \
 "inc\Motor.d" \
 "inc\PWM.d" \
+"inc\SSD1306.d" \
+"inc\TA3InputCapture.d" \
+"inc\Tachometer.d" \
 "inc\UART0.d" \
 "inc\UART1.d" \
+"inc\blinker.d" \
+"inc\fixed.d" \
+"inc\odometry.d" \
 "inc\opt3101.d" 
 
 C_SRCS__QUOTED += \
@@ -85,8 +115,14 @@ C_SRCS__QUOTED += \
 "../inc/LaunchPad.c" \
 "../inc/Motor.c" \
 "../inc/PWM.c" \
+"../inc/SSD1306.c" \
+"../inc/TA3InputCapture.c" \
+"../inc/Tachometer.c" \
 "../inc/UART0.c" \
 "../inc/UART1.c" \
+"../inc/blinker.c" \
+"../inc/fixed.c" \
+"../inc/odometry.c" \
 "../inc/opt3101.c" 
 
 

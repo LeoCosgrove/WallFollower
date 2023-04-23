@@ -19,6 +19,9 @@
 #include "./inc/UART0.h"
 #include "./inc/FFT.h"
 #include "./inc/UART1.h"
+#include "./inc/odometry.h"
+#include "./inc/fixed.h"
+#include "./inc/blinker.h"
 
 // this batch configures for UART link to PC
 #include "./inc/UART0.h"
@@ -80,18 +83,18 @@ uint32_t Sigma;    // standard deviation = sqrt(Variance)
 // assumes track is 500mm
 int32_t Mode=0; // 0 stop, 1 run
 int32_t Error;
-int32_t Ki=1;  // integral controller gain
+int32_t Ki=1800;  // integral controller gain
 int32_t Kp=1;  // proportional controller gain //was 4
 int32_t UR, UL;  // PWM duty 0 to 14,998
 
-#define TOOCLOSE 200 //was 200
-#define DESIRED 250 //was 250
-int32_t SetPoint = 250; // mm //was 250
+#define TOOCLOSE 325 //was 200
+#define DESIRED 400 //was 250
+int32_t SetPoint = DESIRED; // mm //was 250
 int32_t LeftDistance,CenterDistance,RightDistance; // mm
-#define TOOFAR 400 // was 400
+#define TOOFAR 550 // was 400
 
 #define PWMNOMINAL 5000 // was 2500
-#define SWING 2000 //was 1000
+#define SWING 2050 //was 1000
 #define PWMMIN (PWMNOMINAL-SWING)
 #define PWMMAX (PWMNOMINAL+SWING)
 

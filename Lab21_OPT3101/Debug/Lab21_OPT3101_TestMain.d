@@ -35,6 +35,9 @@ Lab21_OPT3101_TestMain.obj: C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.L
 Lab21_OPT3101_TestMain.obj: C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/machine/_limits.h
 Lab21_OPT3101_TestMain.obj: C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdlib.h
 Lab21_OPT3101_TestMain.obj: ../inc/UART1.h
+Lab21_OPT3101_TestMain.obj: ../inc/odometry.h
+Lab21_OPT3101_TestMain.obj: ../inc/fixed.h
+Lab21_OPT3101_TestMain.obj: ../inc/blinker.h
 
 ../Lab21_OPT3101_TestMain.c:
 
@@ -105,4 +108,10 @@ C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/machine/_limits.h
 C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdlib.h:
 
 ../inc/UART1.h:
+
+../inc/odometry.h:
+
+../inc/fixed.h:
+
+../inc/blinker.h:
 

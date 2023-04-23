@@ -22,8 +22,14 @@ ORDERED_OBJS += \
 "./inc/LaunchPad.obj" \
 "./inc/Motor.obj" \
 "./inc/PWM.obj" \
+"./inc/SSD1306.obj" \
+"./inc/TA3InputCapture.obj" \
+"./inc/Tachometer.obj" \
 "./inc/UART0.obj" \
 "./inc/UART1.obj" \
+"./inc/blinker.obj" \
+"./inc/fixed.obj" \
+"./inc/odometry.obj" \
 "./inc/opt3101.obj" \
 "../msp432p401r.cmd" \
 $(GEN_CMDS__FLAG) \
@@ -157,8 +163,8 @@ Lab21_OPT3101.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 # Other Targets
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)
-	-$(RM) "Lab21_OPT3101_TestMain.obj" "startup_msp432p401r_ccs.obj" "system_msp432p401r.obj" "inc\Bump.obj" "inc\Clock.obj" "inc\CortexM.obj" "inc\FFT.obj" "inc\I2CB1.obj" "inc\LPF.obj" "inc\LaunchPad.obj" "inc\Motor.obj" "inc\PWM.obj" "inc\UART0.obj" "inc\UART1.obj" "inc\opt3101.obj" 
-	-$(RM) "Lab21_OPT3101_TestMain.d" "startup_msp432p401r_ccs.d" "system_msp432p401r.d" "inc\Bump.d" "inc\Clock.d" "inc\CortexM.d" "inc\FFT.d" "inc\I2CB1.d" "inc\LPF.d" "inc\LaunchPad.d" "inc\Motor.d" "inc\PWM.d" "inc\UART0.d" "inc\UART1.d" "inc\opt3101.d" 
+	-$(RM) "Lab21_OPT3101_TestMain.obj" "startup_msp432p401r_ccs.obj" "system_msp432p401r.obj" "inc\Bump.obj" "inc\Clock.obj" "inc\CortexM.obj" "inc\FFT.obj" "inc\I2CB1.obj" "inc\LPF.obj" "inc\LaunchPad.obj" "inc\Motor.obj" "inc\PWM.obj" "inc\SSD1306.obj" "inc\TA3InputCapture.obj" "inc\Tachometer.obj" "inc\UART0.obj" "inc\UART1.obj" "inc\blinker.obj" "inc\fixed.obj" "inc\odometry.obj" "inc\opt3101.obj" 
+	-$(RM) "Lab21_OPT3101_TestMain.d" "startup_msp432p401r_ccs.d" "system_msp432p401r.d" "inc\Bump.d" "inc\Clock.d" "inc\CortexM.d" "inc\FFT.d" "inc\I2CB1.d" "inc\LPF.d" "inc\LaunchPad.d" "inc\Motor.d" "inc\PWM.d" "inc\SSD1306.d" "inc\TA3InputCapture.d" "inc\Tachometer.d" "inc\UART0.d" "inc\UART1.d" "inc\blinker.d" "inc\fixed.d" "inc\odometry.d" "inc\opt3101.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 
