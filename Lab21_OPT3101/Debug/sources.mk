@@ -112,5 +112,12 @@ PDE_DEPS__QUOTED :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 . \
+board \
+cli_uart \
+driverlib/MSP432P4xx \
 inc \
+mqtt \
+simplelink/source \
+spi_cc3100 \
+uart_cc3100 \
 
