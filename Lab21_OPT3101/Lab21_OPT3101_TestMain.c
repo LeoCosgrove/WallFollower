@@ -6,6 +6,7 @@
  */
 //comment to test
 
+#include <stdio.h>
 #include <stdint.h>
 #include "msp.h"
 #include "./inc/Clock.h"
@@ -182,6 +183,7 @@ void Pause(void){int i;
 }
 
 void main(void){ // wallFollow wall following implementation
+  printf("Hello, World\n");
   int i = 0;
   bool runFlag = true;
   char charIn = 'g';

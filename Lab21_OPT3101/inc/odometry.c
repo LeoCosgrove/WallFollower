@@ -79,8 +79,8 @@ void Odometry_Init(int32_t initx, int32_t inity, int32_t initTheta){
   Robottheta = initTheta;
 }
 void Odometry_Update(int32_t LCount, int32_t RCount){int32_t L2; int32_t absLr,absRr;
-  Lr = (LCount*C)/N;      // 0.0001cm
-  Rr = (RCount*C)/N;      // 0.0001cm
+  Lr = (LCount*C)/N1;      // 0.0001cm
+  Rr = (RCount*C)/N1;      // 0.0001cm
   if(Lr>=0){
     absLr = Lr;
   }else{
@@ -126,8 +126,8 @@ void Odometry_Update(int32_t LCount, int32_t RCount){int32_t L2; int32_t absLr,a
   Robotx = Robotx + (dz*fixed_cos2(Robottheta))/65536;  // 0.0001cm
   Roboty = Roboty + (dz*fixed_sin2(Robottheta))/65536;  // 0.0001cm  first part of move
   Robottheta = Robottheta + dtheta;               // 0.001 radians
-  if(Robottheta>=PI)Robottheta=Robottheta-TWOPI;  //-8192 to +8191
-  if(Robottheta<-PI)Robottheta=Robottheta+TWOPI;
+  if(Robottheta>=PIR)Robottheta=Robottheta-TWOPI;  //-8192 to +8191
+  if(Robottheta<-PIR)Robottheta=Robottheta+TWOPI;
   Robotx = Robotx + (dz*fixed_cos2(Robottheta))/65536;  // 0.0001cm
   Roboty = Roboty + (dz*fixed_sin2(Robottheta))/65536;  // 0.0001cm  second part of move
 }
@@ -367,8 +367,8 @@ uint32_t SoftLeftUntilTh(int32_t desiredTh){uint32_t data;
   do{// wait for touch or Th position
     data = Bump_Read()+(LaunchPad_Input()<<6); // 8 bit switch inputs
     Error = desiredTh-MyTheta;   // in 2*pi/16384 radians
-    if(Error >= PI)Error = Error-TWOPI;  // -8192 to +8191
-    if(Error < -PI)Error = Error+TWOPI;  // -8192 to +8191
+    if(Error >= PIR)Error = Error-TWOPI;  // -8192 to +8191
+    if(Error < -PIR)Error = Error+TWOPI;  // -8192 to +8191
     goal = abs(Error);           // in 2*pi/16384 radians
     if(goal > lastgoal){         // missed it, going wrong way??
       badCount--;
@@ -395,8 +395,8 @@ uint32_t  ForwardUntilThStatus(void){uint32_t data;
   data = Bump_Read()+(LaunchPad_Input()<<6); // 8 bit switch inputs
   if(data) return data;   // crash
   Error = desiredTh-MyTheta;   // in 2*pi/16384 radians
-  if(Error >= PI)Error = Error-TWOPI;  // -8192 to +8191
-  if(Error < -PI)Error = Error+TWOPI;  // -8192 to +8191
+  if(Error >= PIR)Error = Error-TWOPI;  // -8192 to +8191
+  if(Error < -PIR)Error = Error+TWOPI;  // -8192 to +8191
   goal = abs(Error);           // in 2*pi/16384 radians
   if(goal > lastgoal){         // missed it, going wrong way??
     badCount--;

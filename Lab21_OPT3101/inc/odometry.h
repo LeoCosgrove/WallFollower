@@ -56,12 +56,12 @@ policies, either expressed or implied, of the FreeBSD Project.
 #ifndef _ODOMETRY_H_
 #define _ODOMETRY_H_
 #include <stdint.h>
-#define N 360     ///< counts/rotation, just one edge of one tach
+#define N1 360     ///< counts/rotation, just one edge of one tach
 #define D 70000   ///< wheel diameter 0.0001cm
 #define W 140000  ///< wheel base 0.0001 cm
 #define C 219910  ///< wheel circumference 0.0001cm
-#define PI 8192   ///< representation of pi radians
-#define TWOPI (2*PI) ///< 6.28...
+#define PIR 8192   ///< representation of pi radians
+#define TWOPI (2*PIR) ///< 6.28...
 #define NORTH 4096   ///< direction that is north
 #define EAST  0      ///< direction that is east
 #define SOUTH -4096  ///< direction that is south
