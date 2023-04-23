@@ -20,7 +20,6 @@
 #include "./inc/UART0.h"
 #include "./inc/FFT.h"
 #include "./inc/UART1.h"
-<<<<<<< HEAD
 #include "./driverlib/MSP432P4xx/driverlib.h"
 #include "./simplelink/include/simplelink.h"
 #include "sl_common.h"
@@ -359,11 +358,6 @@ void SimpleLinkSockEventHandler(SlSockEvent_t *pSock)
 /*
  * ASYNCHRONOUS EVENT HANDLERS -- End
  */
-=======
-#include "./inc/odometry.h"
-#include "./inc/fixed.h"
-#include "./inc/blinker.h"
->>>>>>> 3ce1bed9f654b4904e5453923dd8c0ec63ee8a0a
 
 // this batch configures for UART link to PC
 #include "./inc/UART0.h"
@@ -805,7 +799,6 @@ void main(void){ // wallFollow wall following implementation
 
     if(runFlag)
     {
-<<<<<<< HEAD
         uint8_t test = Bump_Read();
         if(Bump_Read()){ // collision
             Mode = 0;
@@ -821,14 +814,6 @@ void main(void){ // wallFollow wall following implementation
             crsh.payload = &crash;
             crsh.payloadlen = sizeof(crash);
             rc = MQTTPublish(&hMQTTClient, "crashBool", &crsh);
-=======
-        uint8_t bumpIn = Bump_Read();
-        if(bumpIn != 0b11101101){ // collision
-          Mode = 0;
-          Motor_Stop();
-          Pause();
-        }
->>>>>>> 3ce1bed9f654b4904e5453923dd8c0ec63ee8a0a
 
             //wait 1 second
             Clock_Delay1ms(1000);
