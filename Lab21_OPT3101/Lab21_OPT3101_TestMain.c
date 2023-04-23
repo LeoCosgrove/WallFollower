@@ -239,8 +239,8 @@ void main(void){ // wallFollow wall following implementation
 
     if(runFlag)
     {
-
-        if(Bump_Read()){ // collision
+        uint8_t bumpIn = Bump_Read();
+        if(bumpIn != 0b11101101){ // collision
           Mode = 0;
           Motor_Stop();
           Pause();
