@@ -6,7 +6,6 @@
  */
 //comment to test
 
-#include <stdio.h>
 #include <stdint.h>
 #include "msp.h"
 #include "./inc/Clock.h"
@@ -420,17 +419,17 @@ uint32_t Sigma;    // standard deviation = sqrt(Variance)
 int32_t Mode=0; // 0 stop, 1 run
 int32_t Error;
 int32_t Ki=1800;  // integral controller gain
-int32_t Kp=1;  // proportional controller gain //was 4
+int32_t Kp=4;  // proportional controller gain //was 4
 int32_t UR, UL;  // PWM duty 0 to 14,998
 
-#define TOOCLOSE 325 //was 200
-#define DESIRED 400 //was 250
-int32_t SetPoint = DESIRED; // mm //was 250
+#define TOOCLOSE 200 //was 200
+#define DESIRED 250 //was 250
+int32_t SetPoint = 250; // mm //was 250
 int32_t LeftDistance,CenterDistance,RightDistance; // mm
-#define TOOFAR 550 // was 400
+#define TOOFAR 400 // was 400
 
 #define PWMNOMINAL 5000 // was 2500
-#define SWING 2050 //was 1000
+#define SWING 2000 //was 1000
 #define PWMMIN (PWMNOMINAL-SWING)
 #define PWMMAX (PWMNOMINAL+SWING)
 
@@ -518,7 +517,6 @@ void Pause(void){int i;
 }
 
 void main(void){ // wallFollow wall following implementation
-  printf("Hello, World\n");
   int i = 0;
   char charIn = 'g';
   int32_t xcoord, ycoord, heading;
@@ -679,7 +677,7 @@ void main(void){ // wallFollow wall following implementation
   CLI_Write(" Subscribed to uniqueID topic \n\r");
 
   while(1){
-    rc = MQTTYield(&hMQTTClient, 500);
+    rc = MQTTYield(&hMQTTClient, 10);
     if (rc != 0) {
         CLI_Write(" MQTT failed to yield \n\r");
         LOOP_FOREVER();
@@ -805,7 +803,8 @@ void main(void){ // wallFollow wall following implementation
             Motor_Stop();
             Pause();
             crash = 1;
-//            report crash
+
+//          report crash
             MQTTMessage crsh;
             crsh.dup = 0;
             crsh.id = 0;
@@ -819,9 +818,9 @@ void main(void){ // wallFollow wall following implementation
             Clock_Delay1ms(1000);
 
             //recover from crash
-            Motor_Backward(9000, 9000);
-            Clock_Delay1ms(1000);
-            Motor_Stop();
+//            Motor_Backward(9000, 9000);
+//            Clock_Delay1ms(1000);
+//            Motor_Stop();
 
             crash = false;
         }
@@ -835,7 +834,6 @@ void main(void){ // wallFollow wall following implementation
             crsh.payloadlen = sizeof(crash);
             rc = MQTTPublish(&hMQTTClient, "crashBool", &crsh);
         }
-//        Delay(10);
 
         if(TxChannel <= 2){ // 0,1,2 means new data
           if(TxChannel==0){
@@ -866,13 +864,7 @@ void main(void){ // wallFollow wall following implementation
         }
         Controller_Right();
         if(i >= 100){
-          i = 0;
-//          SetCursor(3, 5);
-//          OutUDec(SetPoint);
-//          SetCursor(3, 6);
-//          OutSDec(Error);
-//          SetCursor(3, 7);
-//          OutUDec(UL); OutChar(','); OutUDec(UR);
+            i = 0;
         }
 
         WaitForInterrupt();
