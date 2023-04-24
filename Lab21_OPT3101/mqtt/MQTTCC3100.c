@@ -16,6 +16,7 @@
  *******************************************************************************/
 
 #include "MQTTCC3100.h"
+#include <stddef.h>
 
 unsigned long MilliTimer;
 

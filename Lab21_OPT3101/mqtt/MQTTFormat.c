@@ -18,7 +18,7 @@
 #include "MQTTPacket.h"
 
 #include <string.h>
-
+#include <stddef.h>
 
 const char* MQTTPacket_names[] =
 {
