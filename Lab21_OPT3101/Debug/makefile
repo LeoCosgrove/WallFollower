@@ -4,15 +4,49 @@
 
 SHELL = cmd.exe
 
-CG_TOOL_ROOT := C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS
+CG_TOOL_ROOT := C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS
 
 GEN_OPTS__FLAG := 
 GEN_CMDS__FLAG := 
 
 ORDERED_OBJS += \
 "./Lab21_OPT3101_TestMain.obj" \
+"./SSD1306.obj" \
+"./TA3InputCapture.obj" \
+"./Tachometer.obj" \
+"./blinker.obj" \
+"./fixed.obj" \
+"./odometry.obj" \
 "./startup_msp432p401r_ccs.obj" \
 "./system_msp432p401r.obj" \
+"./board/board.obj" \
+"./cli_uart/cli_uart.obj" \
+"./driverlib/MSP432P4xx/adc14.obj" \
+"./driverlib/MSP432P4xx/aes256.obj" \
+"./driverlib/MSP432P4xx/comp_e.obj" \
+"./driverlib/MSP432P4xx/cpu.obj" \
+"./driverlib/MSP432P4xx/crc32.obj" \
+"./driverlib/MSP432P4xx/cs.obj" \
+"./driverlib/MSP432P4xx/dma.obj" \
+"./driverlib/MSP432P4xx/flash.obj" \
+"./driverlib/MSP432P4xx/fpu.obj" \
+"./driverlib/MSP432P4xx/gpio.obj" \
+"./driverlib/MSP432P4xx/i2c.obj" \
+"./driverlib/MSP432P4xx/interrupt.obj" \
+"./driverlib/MSP432P4xx/mpu.obj" \
+"./driverlib/MSP432P4xx/pcm.obj" \
+"./driverlib/MSP432P4xx/pmap.obj" \
+"./driverlib/MSP432P4xx/pss.obj" \
+"./driverlib/MSP432P4xx/ref_a.obj" \
+"./driverlib/MSP432P4xx/reset.obj" \
+"./driverlib/MSP432P4xx/rtc_c.obj" \
+"./driverlib/MSP432P4xx/spi.obj" \
+"./driverlib/MSP432P4xx/sysctl.obj" \
+"./driverlib/MSP432P4xx/systick.obj" \
+"./driverlib/MSP432P4xx/timer32.obj" \
+"./driverlib/MSP432P4xx/timer_a.obj" \
+"./driverlib/MSP432P4xx/uart.obj" \
+"./driverlib/MSP432P4xx/wdt_a.obj" \
 "./inc/Bump.obj" \
 "./inc/Clock.obj" \
 "./inc/CortexM.obj" \
@@ -31,6 +65,30 @@ ORDERED_OBJS += \
 "./inc/fixed.obj" \
 "./inc/odometry.obj" \
 "./inc/opt3101.obj" \
+"./mqtt/MQTTCC3100.obj" \
+"./mqtt/MQTTClient.obj" \
+"./mqtt/MQTTConnectClient.obj" \
+"./mqtt/MQTTConnectServer.obj" \
+"./mqtt/MQTTDeserializePublish.obj" \
+"./mqtt/MQTTFormat.obj" \
+"./mqtt/MQTTPacket.obj" \
+"./mqtt/MQTTSerializePublish.obj" \
+"./mqtt/MQTTSubscribeClient.obj" \
+"./mqtt/MQTTSubscribeServer.obj" \
+"./mqtt/MQTTUnsubscribeClient.obj" \
+"./mqtt/MQTTUnsubscribeServer.obj" \
+"./simplelink/source/device.obj" \
+"./simplelink/source/driver.obj" \
+"./simplelink/source/flowcont.obj" \
+"./simplelink/source/fs.obj" \
+"./simplelink/source/netapp.obj" \
+"./simplelink/source/netcfg.obj" \
+"./simplelink/source/nonos.obj" \
+"./simplelink/source/socket.obj" \
+"./simplelink/source/spawn.obj" \
+"./simplelink/source/wlan.obj" \
+"./spi_cc3100/spi_cc3100.obj" \
+"./uart_cc3100/uart_cc3100.obj" \
 "../msp432p401r.cmd" \
 $(GEN_CMDS__FLAG) \
 -llibc.a \
@@ -43,9 +101,23 @@ RMDIR := RMDIR /S/Q
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include subdir_vars.mk
+-include board/subdir_vars.mk
+-include cli_uart/subdir_vars.mk
+-include driverlib/MSP432P4xx/subdir_vars.mk
 -include inc/subdir_vars.mk
+-include mqtt/subdir_vars.mk
+-include simplelink/source/subdir_vars.mk
+-include spi_cc3100/subdir_vars.mk
+-include uart_cc3100/subdir_vars.mk
 -include subdir_rules.mk
+-include board/subdir_rules.mk
+-include cli_uart/subdir_rules.mk
+-include driverlib/MSP432P4xx/subdir_rules.mk
 -include inc/subdir_rules.mk
+-include mqtt/subdir_rules.mk
+-include simplelink/source/subdir_rules.mk
+-include spi_cc3100/subdir_rules.mk
+-include uart_cc3100/subdir_rules.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
@@ -142,29 +214,50 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXE_OUTPUTS += \
-Lab21_OPT3101.out \
+Lab21_OPT3102_3.out \
 
 EXE_OUTPUTS__QUOTED += \
-"Lab21_OPT3101.out" \
+"Lab21_OPT3102_3.out" \
+
+BIN_OUTPUTS += \
+Lab21_OPT3102_3.hex \
+
+BIN_OUTPUTS__QUOTED += \
+"Lab21_OPT3102_3.hex" \
 
 
 # All Target
 all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
-	@$(MAKE) --no-print-directory -Onone "Lab21_OPT3101.out"
+	@$(MAKE) --no-print-directory -Onone "Lab21_OPT3102_3.out"
 
 # Tool invocations
-Lab21_OPT3101.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
+Lab21_OPT3102_3.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: ARM Linker'
-	"C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --advice:power=all --define=__MSP432P401R__ --define=ccs -g --c99 --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab21_OPT3101.map" --heap_size=1024 --stack_size=512 -i"C:/ti/ccs1220/ccs/ccs_base/arm/include" -i"C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab21_OPT3101_linkInfo.xml" --rom_model -o "Lab21_OPT3101.out" $(ORDERED_OBJS)
+	"C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --advice:power=all --define=__MSP432P401R__ --define=ccs -g --c99 --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab21_OPT3102_3.map" --heap_size=1024 --stack_size=512 -i"C:/Users/hokke/Documents/_cyber/ccs/ccs/ccs_base/arm/include" -i"C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab21_OPT3102_3_linkInfo.xml" --rom_model -o "Lab21_OPT3102_3.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
+	@echo ' '
+
+Lab21_OPT3102_3.hex: $(EXE_OUTPUTS)
+	@echo 'Building secondary target: "$@"'
+	@echo 'Invoking: ARM Hex Utility'
+	"C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armhex" --memwidth=8 --romwidth=8 --diag_wrap=off -o "Lab21_OPT3102_3.hex" $(EXE_OUTPUTS__QUOTED)
+	@echo 'Finished building secondary target: "$@"'
 	@echo ' '
 
 # Other Targets
 clean:
+<<<<<<< HEAD
+	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
+	-$(RM) "Lab21_OPT3101_TestMain.obj" "SSD1306.obj" "TA3InputCapture.obj" "Tachometer.obj" "blinker.obj" "fixed.obj" "odometry.obj" "startup_msp432p401r_ccs.obj" "system_msp432p401r.obj" "board\board.obj" "cli_uart\cli_uart.obj" "driverlib\MSP432P4xx\adc14.obj" "driverlib\MSP432P4xx\aes256.obj" "driverlib\MSP432P4xx\comp_e.obj" "driverlib\MSP432P4xx\cpu.obj" "driverlib\MSP432P4xx\crc32.obj" "driverlib\MSP432P4xx\cs.obj" "driverlib\MSP432P4xx\dma.obj" "driverlib\MSP432P4xx\flash.obj" "driverlib\MSP432P4xx\fpu.obj" "driverlib\MSP432P4xx\gpio.obj" "driverlib\MSP432P4xx\i2c.obj" "driverlib\MSP432P4xx\interrupt.obj" "driverlib\MSP432P4xx\mpu.obj" "driverlib\MSP432P4xx\pcm.obj" "driverlib\MSP432P4xx\pmap.obj" "driverlib\MSP432P4xx\pss.obj" "driverlib\MSP432P4xx\ref_a.obj" "driverlib\MSP432P4xx\reset.obj" "driverlib\MSP432P4xx\rtc_c.obj" "driverlib\MSP432P4xx\spi.obj" "driverlib\MSP432P4xx\sysctl.obj" "driverlib\MSP432P4xx\systick.obj" "driverlib\MSP432P4xx\timer32.obj" "driverlib\MSP432P4xx\timer_a.obj" 
+	-$(RM) "driverlib\MSP432P4xx\uart.obj" "driverlib\MSP432P4xx\wdt_a.obj" "inc\Bump.obj" "inc\Clock.obj" "inc\CortexM.obj" "inc\FFT.obj" "inc\I2CB1.obj" "inc\LPF.obj" "inc\LaunchPad.obj" "inc\Motor.obj" "inc\PWM.obj" "inc\UART0.obj" "inc\UART1.obj" "inc\opt3101.obj" "mqtt\MQTTCC3100.obj" "mqtt\MQTTClient.obj" "mqtt\MQTTConnectClient.obj" "mqtt\MQTTConnectServer.obj" "mqtt\MQTTDeserializePublish.obj" "mqtt\MQTTFormat.obj" "mqtt\MQTTPacket.obj" "mqtt\MQTTSerializePublish.obj" "mqtt\MQTTSubscribeClient.obj" "mqtt\MQTTSubscribeServer.obj" "mqtt\MQTTUnsubscribeClient.obj" "mqtt\MQTTUnsubscribeServer.obj" "simplelink\source\device.obj" "simplelink\source\driver.obj" "simplelink\source\flowcont.obj" "simplelink\source\fs.obj" "simplelink\source\netapp.obj" "simplelink\source\netcfg.obj" "simplelink\source\nonos.obj" "simplelink\source\socket.obj" "simplelink\source\spawn.obj" "simplelink\source\wlan.obj" "spi_cc3100\spi_cc3100.obj" "uart_cc3100\uart_cc3100.obj" 
+	-$(RM) "Lab21_OPT3101_TestMain.d" "SSD1306.d" "TA3InputCapture.d" "Tachometer.d" "blinker.d" "fixed.d" "odometry.d" "startup_msp432p401r_ccs.d" "system_msp432p401r.d" "board\board.d" "cli_uart\cli_uart.d" "driverlib\MSP432P4xx\adc14.d" "driverlib\MSP432P4xx\aes256.d" "driverlib\MSP432P4xx\comp_e.d" "driverlib\MSP432P4xx\cpu.d" "driverlib\MSP432P4xx\crc32.d" "driverlib\MSP432P4xx\cs.d" "driverlib\MSP432P4xx\dma.d" "driverlib\MSP432P4xx\flash.d" "driverlib\MSP432P4xx\fpu.d" "driverlib\MSP432P4xx\gpio.d" "driverlib\MSP432P4xx\i2c.d" "driverlib\MSP432P4xx\interrupt.d" "driverlib\MSP432P4xx\mpu.d" "driverlib\MSP432P4xx\pcm.d" "driverlib\MSP432P4xx\pmap.d" "driverlib\MSP432P4xx\pss.d" "driverlib\MSP432P4xx\ref_a.d" "driverlib\MSP432P4xx\reset.d" "driverlib\MSP432P4xx\rtc_c.d" "driverlib\MSP432P4xx\spi.d" "driverlib\MSP432P4xx\sysctl.d" "driverlib\MSP432P4xx\systick.d" "driverlib\MSP432P4xx\timer32.d" "driverlib\MSP432P4xx\timer_a.d" "driverlib\MSP432P4xx\uart.d" "driverlib\MSP432P4xx\wdt_a.d" "inc\Bump.d" 
+	-$(RM) "inc\Clock.d" "inc\CortexM.d" "inc\FFT.d" "inc\I2CB1.d" "inc\LPF.d" "inc\LaunchPad.d" "inc\Motor.d" "inc\PWM.d" "inc\UART0.d" "inc\UART1.d" "inc\opt3101.d" "mqtt\MQTTCC3100.d" "mqtt\MQTTClient.d" "mqtt\MQTTConnectClient.d" "mqtt\MQTTConnectServer.d" "mqtt\MQTTDeserializePublish.d" "mqtt\MQTTFormat.d" "mqtt\MQTTPacket.d" "mqtt\MQTTSerializePublish.d" "mqtt\MQTTSubscribeClient.d" "mqtt\MQTTSubscribeServer.d" "mqtt\MQTTUnsubscribeClient.d" "mqtt\MQTTUnsubscribeServer.d" "simplelink\source\device.d" "simplelink\source\driver.d" "simplelink\source\flowcont.d" "simplelink\source\fs.d" "simplelink\source\netapp.d" "simplelink\source\netcfg.d" "simplelink\source\nonos.d" "simplelink\source\socket.d" "simplelink\source\spawn.d" "simplelink\source\wlan.d" "spi_cc3100\spi_cc3100.d" "uart_cc3100\uart_cc3100.d" 
+=======
 	-$(RM) $(EXE_OUTPUTS__QUOTED)
 	-$(RM) "Lab21_OPT3101_TestMain.obj" "startup_msp432p401r_ccs.obj" "system_msp432p401r.obj" "inc\Bump.obj" "inc\Clock.obj" "inc\CortexM.obj" "inc\FFT.obj" "inc\I2CB1.obj" "inc\LPF.obj" "inc\LaunchPad.obj" "inc\Motor.obj" "inc\PWM.obj" "inc\SSD1306.obj" "inc\TA3InputCapture.obj" "inc\Tachometer.obj" "inc\UART0.obj" "inc\UART1.obj" "inc\blinker.obj" "inc\fixed.obj" "inc\odometry.obj" "inc\opt3101.obj" 
 	-$(RM) "Lab21_OPT3101_TestMain.d" "startup_msp432p401r_ccs.d" "system_msp432p401r.d" "inc\Bump.d" "inc\Clock.d" "inc\CortexM.d" "inc\FFT.d" "inc\I2CB1.d" "inc\LPF.d" "inc\LaunchPad.d" "inc\Motor.d" "inc\PWM.d" "inc\SSD1306.d" "inc\TA3InputCapture.d" "inc\Tachometer.d" "inc\UART0.d" "inc\UART1.d" "inc\blinker.d" "inc\fixed.d" "inc\odometry.d" "inc\opt3101.d" 
+>>>>>>> 3ce1bed9f654b4904e5453923dd8c0ec63ee8a0a
 	-@echo 'Finished clean'
 	-@echo ' '
 

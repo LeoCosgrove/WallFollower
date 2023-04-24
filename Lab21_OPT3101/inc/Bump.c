@@ -68,10 +68,13 @@ void Bump_Init(){
 // bit 1 Bump1
 // bit 0 Bump0
 uint8_t Bump_Read(void){
-    uint8_t input;
+    uint8_t p4masked;
 
-    input = (P4->IN)&0xED;
+    p4masked = (P4->IN)&0xED;
+    uint8_t result = ((p4masked&0x80)>>2)|((p4masked&0x40)>>2)|((p4masked&0x20)>>2)|((p4masked&0x08)>>1)|((p4masked&0x04)>>1)|(p4masked&(0x01));
 
-    return input; // replace this line
+    uint8_t mask = 0x3F;
+
+    return result^= mask;
 }
 
