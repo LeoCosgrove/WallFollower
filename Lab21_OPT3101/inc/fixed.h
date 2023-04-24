@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /**
  * @file      fixed.h
  * @brief     trig functions using fixed point
@@ -54,7 +53,6 @@ int32_t fixed_sin2(int32_t theta);
  * @brief binary fixed-point cos
  */
 int32_t fixed_cos2(int32_t theta);
-=======
 /**
  * @file      fixed.h
  * @brief     trig functions using fixed point
@@ -110,4 +108,3 @@ int32_t fixed_sin2(int32_t theta);
  * @brief binary fixed-point cos
  */
 int32_t fixed_cos2(int32_t theta);
->>>>>>> 3ce1bed9f654b4904e5453923dd8c0ec63ee8a0a

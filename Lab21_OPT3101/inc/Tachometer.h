@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /**
  * @file      Tachometer.h
  * @brief     Take tachometer angle and distance measurements
@@ -103,7 +102,6 @@ void Tachometer_Get(uint16_t *leftTach, enum TachDirection *leftDir, int32_t *le
                     uint16_t *rightTach, enum TachDirection *rightDir, int32_t *rightSteps);
 
 #endif /* TACHOMETER_H_ */
-=======
 /**
  * @file      Tachometer.h
  * @brief     Take tachometer angle and distance measurements
@@ -208,4 +206,3 @@ void Tachometer_Get(uint16_t *leftTach, enum TachDirection *leftDir, int32_t *le
                     uint16_t *rightTach, enum TachDirection *rightDir, int32_t *rightSteps);
 
 #endif /* TACHOMETER_H_ */
->>>>>>> 3ce1bed9f654b4904e5453923dd8c0ec63ee8a0a

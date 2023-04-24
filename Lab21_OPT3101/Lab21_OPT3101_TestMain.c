@@ -21,7 +21,7 @@
 #include "./inc/UART1.h"
 #include "./driverlib/MSP432P4xx/driverlib.h"
 #include "./simplelink/include/simplelink.h"
-#include "sl_common.h"
+#include "./inc/sl_common.h"
 #include "./mqtt/MQTTClient.h"
 #include "./inc/Tachometer.h"
 #include "./inc/odometry.h"
@@ -491,7 +491,7 @@ void Controller_Right(void){ // runs at 100 Hz
   }
 }
 
-void Pause(void){int i;
+void Pause(void){
 /*
   while(Bump_Read()){ // wait for release
     Clock_Delay1ms(200); LaunchPad_Output(0); // off
@@ -566,7 +566,7 @@ void main(void){ // wallFollow wall following implementation
   _i32 retVal = -1;
 
   retVal = initializeAppVariables();
-  ASSERT_ON_ERROR(retVal);
+  //ASSERT_ON_ERROR(retVal);
 
   /* Stop WDT and initialize the system-clock of the MCU */
   stopWDT();

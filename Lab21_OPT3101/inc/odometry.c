@@ -1,3 +1,4 @@
+#pragma once
 // odometry.c
 // Inputs to the system are left and right tachometer counts
 // System is called periodically, e.g., every 20 to 40 ms
@@ -44,7 +45,7 @@ policies, either expressed or implied, of the FreeBSD Project.
 #include "msp.h"
 #include <stdio.h>
 #include ".\fixed.h"
-#include ".\odometry.h"
+#include "./odometry.h"
 #include ".\Motor.h"
 #include ".\Tachometer.h"
 #include ".\SSD1306.h"
@@ -52,6 +53,7 @@ policies, either expressed or implied, of the FreeBSD Project.
 #include ".\bump.h"
 #include ".\clock.h"
 #include ".\blinker.h"
+
 uint32_t MotorFast=4000; // PWM for fast motions, out of 15000
 uint32_t MotorSlow=2000; // PWM for slow motions, out of 15000
 void Odometry_SetPower(uint32_t fast, uint32_t slow){

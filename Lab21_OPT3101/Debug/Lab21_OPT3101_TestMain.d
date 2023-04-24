@@ -1,36 +1,14 @@
 # FIXED
 
 Lab21_OPT3101_TestMain.obj: ../Lab21_OPT3101_TestMain.c
-<<<<<<< HEAD
-Lab21_OPT3101_TestMain.obj: C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdint.h
-Lab21_OPT3101_TestMain.obj: C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/_ti_config.h
-Lab21_OPT3101_TestMain.obj: C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/linkage.h
-Lab21_OPT3101_TestMain.obj: C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/_stdint40.h
-Lab21_OPT3101_TestMain.obj: C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/sys/stdint.h
-Lab21_OPT3101_TestMain.obj: C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/sys/cdefs.h
-Lab21_OPT3101_TestMain.obj: C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/sys/_types.h
-Lab21_OPT3101_TestMain.obj: C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/machine/_types.h
-Lab21_OPT3101_TestMain.obj: C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/machine/_stdint.h
-Lab21_OPT3101_TestMain.obj: C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/sys/_stdint.h
-Lab21_OPT3101_TestMain.obj: C:/Users/hokke/Documents/_cyber/ccs/ccs/ccs_base/arm/include/msp.h
-Lab21_OPT3101_TestMain.obj: C:/Users/hokke/Documents/_cyber/ccs/ccs/ccs_base/arm/include/msp432p401r.h
-Lab21_OPT3101_TestMain.obj: C:/Users/hokke/Documents/_cyber/ccs/ccs/ccs_base/arm/include/msp_compatibility.h
-Lab21_OPT3101_TestMain.obj: C:/Users/hokke/Documents/_cyber/ccs/ccs/ccs_base/arm/include/msp432p401r_classic.h
-Lab21_OPT3101_TestMain.obj: C:/Users/hokke/Documents/_cyber/ccs/ccs/ccs_base/arm/include/CMSIS/core_cm4.h
-Lab21_OPT3101_TestMain.obj: C:/Users/hokke/Documents/_cyber/ccs/ccs/ccs_base/arm/include/CMSIS/cmsis_compiler.h
-Lab21_OPT3101_TestMain.obj: C:/Users/hokke/Documents/_cyber/ccs/ccs/ccs_base/arm/include/CMSIS/cmsis_ccs.h
-Lab21_OPT3101_TestMain.obj: C:/Users/hokke/Documents/_cyber/ccs/ccs/ccs_base/arm/include/system_msp432p401r.h
-=======
-Lab21_OPT3101_TestMain.obj: C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdio.h
+Lab21_OPT3101_TestMain.obj: C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdint.h
 Lab21_OPT3101_TestMain.obj: C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/_ti_config.h
 Lab21_OPT3101_TestMain.obj: C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/linkage.h
-Lab21_OPT3101_TestMain.obj: C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdarg.h
-Lab21_OPT3101_TestMain.obj: C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/sys/_types.h
-Lab21_OPT3101_TestMain.obj: C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/sys/cdefs.h
-Lab21_OPT3101_TestMain.obj: C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/machine/_types.h
-Lab21_OPT3101_TestMain.obj: C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdint.h
 Lab21_OPT3101_TestMain.obj: C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/_stdint40.h
 Lab21_OPT3101_TestMain.obj: C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/sys/stdint.h
+Lab21_OPT3101_TestMain.obj: C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/sys/cdefs.h
+Lab21_OPT3101_TestMain.obj: C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/sys/_types.h
+Lab21_OPT3101_TestMain.obj: C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/machine/_types.h
 Lab21_OPT3101_TestMain.obj: C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/machine/_stdint.h
 Lab21_OPT3101_TestMain.obj: C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/sys/_stdint.h
 Lab21_OPT3101_TestMain.obj: C:/ti/ccs1220/ccs/ccs_base/arm/include/msp.h
@@ -41,24 +19,22 @@ Lab21_OPT3101_TestMain.obj: C:/ti/ccs1220/ccs/ccs_base/arm/include/CMSIS/core_cm
 Lab21_OPT3101_TestMain.obj: C:/ti/ccs1220/ccs/ccs_base/arm/include/CMSIS/cmsis_compiler.h
 Lab21_OPT3101_TestMain.obj: C:/ti/ccs1220/ccs/ccs_base/arm/include/CMSIS/cmsis_ccs.h
 Lab21_OPT3101_TestMain.obj: C:/ti/ccs1220/ccs/ccs_base/arm/include/system_msp432p401r.h
->>>>>>> 3ce1bed9f654b4904e5453923dd8c0ec63ee8a0a
 Lab21_OPT3101_TestMain.obj: ../inc/Clock.h
 Lab21_OPT3101_TestMain.obj: ../inc/I2CB1.h
 Lab21_OPT3101_TestMain.obj: ../inc/CortexM.h
 Lab21_OPT3101_TestMain.obj: ../inc/LPF.h
 Lab21_OPT3101_TestMain.obj: ../inc/opt3101.h
-Lab21_OPT3101_TestMain.obj: C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdbool.h
+Lab21_OPT3101_TestMain.obj: C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdbool.h
 Lab21_OPT3101_TestMain.obj: ../inc/LaunchPad.h
 Lab21_OPT3101_TestMain.obj: ../inc/Bump.h
 Lab21_OPT3101_TestMain.obj: ../inc/Motor.h
 Lab21_OPT3101_TestMain.obj: ../inc/UART0.h
 Lab21_OPT3101_TestMain.obj: ../inc/FFT.h
-Lab21_OPT3101_TestMain.obj: C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/math.h
-Lab21_OPT3101_TestMain.obj: C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/_defs.h
-Lab21_OPT3101_TestMain.obj: C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/machine/_limits.h
-Lab21_OPT3101_TestMain.obj: C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdlib.h
+Lab21_OPT3101_TestMain.obj: C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/math.h
+Lab21_OPT3101_TestMain.obj: C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/_defs.h
+Lab21_OPT3101_TestMain.obj: C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/machine/_limits.h
+Lab21_OPT3101_TestMain.obj: C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdlib.h
 Lab21_OPT3101_TestMain.obj: ../inc/UART1.h
-<<<<<<< HEAD
 Lab21_OPT3101_TestMain.obj: ../driverlib/MSP432P4xx/driverlib.h
 Lab21_OPT3101_TestMain.obj: ../driverlib/MSP432P4xx/adc14.h
 Lab21_OPT3101_TestMain.obj: ../driverlib/MSP432P4xx/aes256.h
@@ -91,15 +67,15 @@ Lab21_OPT3101_TestMain.obj: ../driverlib/MSP432P4xx/uart.h
 Lab21_OPT3101_TestMain.obj: ../driverlib/MSP432P4xx/wdt_a.h
 Lab21_OPT3101_TestMain.obj: ../simplelink/include/simplelink.h
 Lab21_OPT3101_TestMain.obj: ../simplelink/include/user.h
-Lab21_OPT3101_TestMain.obj: C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/string.h
-Lab21_OPT3101_TestMain.obj: C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/xlocale/_string.h
-Lab21_OPT3101_TestMain.obj: C:/Users/hokke/Documents/_cyber/ccs/ccs/ccs_base/arm/include/msp432.h
-Lab21_OPT3101_TestMain.obj: C:/ti/tirslk_max_1_00_02/Lab21_OPT3102_3/board/board.h
-Lab21_OPT3101_TestMain.obj: C:/ti/tirslk_max_1_00_02/Lab21_OPT3102_3/cli_uart/cli_uart.h
-Lab21_OPT3101_TestMain.obj: C:/ti/tirslk_max_1_00_02/Lab21_OPT3102_3/spi_cc3100/spi_cc3100.h
+Lab21_OPT3101_TestMain.obj: C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/string.h
+Lab21_OPT3101_TestMain.obj: C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/xlocale/_string.h
+Lab21_OPT3101_TestMain.obj: C:/ti/ccs1220/ccs/ccs_base/arm/include/msp432.h
+Lab21_OPT3101_TestMain.obj: C:/Users/theab/Documents/School/Cyber-Physical\ Systems/WallFollower/Lab21_OPT3101/board/board.h
+Lab21_OPT3101_TestMain.obj: C:/Users/theab/Documents/School/Cyber-Physical\ Systems/WallFollower/Lab21_OPT3101/cli_uart/cli_uart.h
+Lab21_OPT3101_TestMain.obj: C:/Users/theab/Documents/School/Cyber-Physical\ Systems/WallFollower/Lab21_OPT3101/spi_cc3100/spi_cc3100.h
 Lab21_OPT3101_TestMain.obj: ../simplelink/source/nonos.h
 Lab21_OPT3101_TestMain.obj: ../simplelink/source/objInclusion.h
-Lab21_OPT3101_TestMain.obj: C:/ti/tirslk_max_1_00_02/Lab21_OPT3102_3/simplelink/include/simplelink.h
+Lab21_OPT3101_TestMain.obj: C:/Users/theab/Documents/School/Cyber-Physical\ Systems/WallFollower/Lab21_OPT3101/simplelink/include/simplelink.h
 Lab21_OPT3101_TestMain.obj: ../simplelink/include/trace.h
 Lab21_OPT3101_TestMain.obj: ../simplelink/include/fs.h
 Lab21_OPT3101_TestMain.obj: ../simplelink/include/socket.h
@@ -108,7 +84,7 @@ Lab21_OPT3101_TestMain.obj: ../simplelink/include/wlan.h
 Lab21_OPT3101_TestMain.obj: ../simplelink/include/device.h
 Lab21_OPT3101_TestMain.obj: ../simplelink/include/netcfg.h
 Lab21_OPT3101_TestMain.obj: ../simplelink/include/wlan_rx_filters.h
-Lab21_OPT3101_TestMain.obj: ../sl_common.h
+Lab21_OPT3101_TestMain.obj: ../inc/sl_common.h
 Lab21_OPT3101_TestMain.obj: ../mqtt/MQTTClient.h
 Lab21_OPT3101_TestMain.obj: ../mqtt/MQTTPacket.h
 Lab21_OPT3101_TestMain.obj: ../mqtt/MQTTConnect.h
@@ -117,8 +93,8 @@ Lab21_OPT3101_TestMain.obj: ../mqtt/MQTTSubscribe.h
 Lab21_OPT3101_TestMain.obj: ../mqtt/MQTTUnsubscribe.h
 Lab21_OPT3101_TestMain.obj: ../mqtt/MQTTFormat.h
 Lab21_OPT3101_TestMain.obj: ../mqtt/StackTrace.h
-Lab21_OPT3101_TestMain.obj: C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdio.h
-Lab21_OPT3101_TestMain.obj: C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdarg.h
+Lab21_OPT3101_TestMain.obj: C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdio.h
+Lab21_OPT3101_TestMain.obj: C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdarg.h
 Lab21_OPT3101_TestMain.obj: ../mqtt/MQTTPacket.h
 Lab21_OPT3101_TestMain.obj: ../mqtt/MQTTCC3100.h
 Lab21_OPT3101_TestMain.obj: ../inc/Tachometer.h
@@ -126,68 +102,41 @@ Lab21_OPT3101_TestMain.obj: ../inc/odometry.h
 
 ../Lab21_OPT3101_TestMain.c:
 
-C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdint.h:
-=======
-Lab21_OPT3101_TestMain.obj: ../inc/odometry.h
-Lab21_OPT3101_TestMain.obj: ../inc/fixed.h
-Lab21_OPT3101_TestMain.obj: ../inc/blinker.h
-
-../Lab21_OPT3101_TestMain.c:
-
-C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdio.h:
->>>>>>> 3ce1bed9f654b4904e5453923dd8c0ec63ee8a0a
-
-C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/_ti_config.h:
-
-C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/linkage.h:
-
-<<<<<<< HEAD
-C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/_stdint40.h:
-
-C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/sys/stdint.h:
-
-C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/sys/cdefs.h:
-=======
-C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdarg.h:
->>>>>>> 3ce1bed9f654b4904e5453923dd8c0ec63ee8a0a
-
-C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/sys/_types.h:
-
-<<<<<<< HEAD
-C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/machine/_types.h:
-
-C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/machine/_stdint.h:
-=======
-C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/sys/cdefs.h:
-
-C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/machine/_types.h:
-
 C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdint.h:
+
+C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/_ti_config.h:
+
+C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/linkage.h:
 
 C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/_stdint40.h:
 
 C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/sys/stdint.h:
 
+C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/sys/cdefs.h:
+
+C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/sys/_types.h:
+
+C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/machine/_types.h:
+
 C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/machine/_stdint.h:
->>>>>>> 3ce1bed9f654b4904e5453923dd8c0ec63ee8a0a
 
-C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/sys/_stdint.h:
+C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/sys/_stdint.h:
 
-C:/Users/hokke/Documents/_cyber/ccs/ccs/ccs_base/arm/include/msp.h:
+C:/ti/ccs1220/ccs/ccs_base/arm/include/msp.h:
 
-C:/Users/hokke/Documents/_cyber/ccs/ccs/ccs_base/arm/include/msp432p401r.h:
+C:/ti/ccs1220/ccs/ccs_base/arm/include/msp432p401r.h:
 
-C:/Users/hokke/Documents/_cyber/ccs/ccs/ccs_base/arm/include/msp_compatibility.h:
+C:/ti/ccs1220/ccs/ccs_base/arm/include/msp_compatibility.h:
 
-C:/Users/hokke/Documents/_cyber/ccs/ccs/ccs_base/arm/include/msp432p401r_classic.h:
+C:/ti/ccs1220/ccs/ccs_base/arm/include/msp432p401r_classic.h:
 
-C:/Users/hokke/Documents/_cyber/ccs/ccs/ccs_base/arm/include/CMSIS/core_cm4.h:
+C:/ti/ccs1220/ccs/ccs_base/arm/include/CMSIS/core_cm4.h:
 
-C:/Users/hokke/Documents/_cyber/ccs/ccs/ccs_base/arm/include/CMSIS/cmsis_compiler.h:
+C:/ti/ccs1220/ccs/ccs_base/arm/include/CMSIS/cmsis_compiler.h:
 
-C:/Users/hokke/Documents/_cyber/ccs/ccs/ccs_base/arm/include/CMSIS/cmsis_ccs.h:
+C:/ti/ccs1220/ccs/ccs_base/arm/include/CMSIS/cmsis_ccs.h:
 
-C:/Users/hokke/Documents/_cyber/ccs/ccs/ccs_base/arm/include/system_msp432p401r.h:
+C:/ti/ccs1220/ccs/ccs_base/arm/include/system_msp432p401r.h:
 
 ../inc/Clock.h:
 
@@ -199,7 +148,7 @@ C:/Users/hokke/Documents/_cyber/ccs/ccs/ccs_base/arm/include/system_msp432p401r.
 
 ../inc/opt3101.h:
 
-C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdbool.h:
+C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdbool.h:
 
 ../inc/LaunchPad.h:
 
@@ -211,17 +160,16 @@ C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/inc
 
 ../inc/FFT.h:
 
-C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/math.h:
+C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/math.h:
 
-C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/_defs.h:
+C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/_defs.h:
 
-C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/machine/_limits.h:
+C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/machine/_limits.h:
 
-C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdlib.h:
+C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdlib.h:
 
 ../inc/UART1.h:
 
-<<<<<<< HEAD
 ../driverlib/MSP432P4xx/driverlib.h:
 
 ../driverlib/MSP432P4xx/adc14.h:
@@ -286,23 +234,23 @@ C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/inc
 
 ../simplelink/include/user.h:
 
-C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/string.h:
+C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/string.h:
 
-C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/xlocale/_string.h:
+C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/xlocale/_string.h:
 
-C:/Users/hokke/Documents/_cyber/ccs/ccs/ccs_base/arm/include/msp432.h:
+C:/ti/ccs1220/ccs/ccs_base/arm/include/msp432.h:
 
-C:/ti/tirslk_max_1_00_02/Lab21_OPT3102_3/board/board.h:
+C:/Users/theab/Documents/School/Cyber-Physical\ Systems/WallFollower/Lab21_OPT3101/board/board.h:
 
-C:/ti/tirslk_max_1_00_02/Lab21_OPT3102_3/cli_uart/cli_uart.h:
+C:/Users/theab/Documents/School/Cyber-Physical\ Systems/WallFollower/Lab21_OPT3101/cli_uart/cli_uart.h:
 
-C:/ti/tirslk_max_1_00_02/Lab21_OPT3102_3/spi_cc3100/spi_cc3100.h:
+C:/Users/theab/Documents/School/Cyber-Physical\ Systems/WallFollower/Lab21_OPT3101/spi_cc3100/spi_cc3100.h:
 
 ../simplelink/source/nonos.h:
 
 ../simplelink/source/objInclusion.h:
 
-C:/ti/tirslk_max_1_00_02/Lab21_OPT3102_3/simplelink/include/simplelink.h:
+C:/Users/theab/Documents/School/Cyber-Physical\ Systems/WallFollower/Lab21_OPT3101/simplelink/include/simplelink.h:
 
 ../simplelink/include/trace.h:
 
@@ -320,7 +268,7 @@ C:/ti/tirslk_max_1_00_02/Lab21_OPT3102_3/simplelink/include/simplelink.h:
 
 ../simplelink/include/wlan_rx_filters.h:
 
-../sl_common.h:
+../inc/sl_common.h:
 
 ../mqtt/MQTTClient.h:
 
@@ -338,9 +286,9 @@ C:/ti/tirslk_max_1_00_02/Lab21_OPT3102_3/simplelink/include/simplelink.h:
 
 ../mqtt/StackTrace.h:
 
-C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdio.h:
+C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdio.h:
 
-C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdarg.h:
+C:/ti/ccs1220/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stdarg.h:
 
 ../mqtt/MQTTPacket.h:
 
@@ -350,11 +298,3 @@ C:/Users/hokke/Documents/_cyber/ccs/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/inc
 
 ../inc/odometry.h:
 
-=======
-../inc/odometry.h:
-
-../inc/fixed.h:
-
-../inc/blinker.h:
-
->>>>>>> 3ce1bed9f654b4904e5453923dd8c0ec63ee8a0a

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /**
  * @file      SSD1306.h
  * @brief     Provide simple I/O functions for the SSD 1306 OLED
@@ -490,7 +489,6 @@ void SSD1306_OutUDec16(uint32_t n);
 void SSD1306_OutUDec2(uint32_t n);
 
 #endif // _SSD1306_H_
-=======
 /**
  * @file      SSD1306.h
  * @brief     Provide simple I/O functions for the SSD 1306 OLED
@@ -982,4 +980,3 @@ void SSD1306_OutUDec16(uint32_t n);
 void SSD1306_OutUDec2(uint32_t n);
 
 #endif // _SSD1306_H_
->>>>>>> 3ce1bed9f654b4904e5453923dd8c0ec63ee8a0a

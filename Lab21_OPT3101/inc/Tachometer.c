@@ -46,8 +46,8 @@ policies, either expressed or implied, of the FreeBSD Project.
 // Right Encoder B connected to P5.0 (J2.13)
 
 #include <stdint.h>
-#include "../inc/Clock.h"
-#include "../inc/TA3InputCapture.h"
+#include "./Clock.h"
+#include "./TA3InputCapture.h"
 #include "msp.h"
 #include "Tachometer.h"
 
